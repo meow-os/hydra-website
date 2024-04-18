@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+.fira-mono-regular {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #c0c1c7;
+}
+
+.fira-mono-medium {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+  font-style: normal;
+  color: #c0c1c7;
+}
+
+.fira-mono-bold {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 700;
+  font-style: normal;
+  color: #c0c1c7;
+}
