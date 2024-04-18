@@ -48,6 +48,7 @@ ul {
 main {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
   padding: 6rem;
   background-color: #1c1c1c;
@@ -125,7 +126,6 @@ main {
 }
 
 @media screen and (max-width: 1280px) {
-
   nav {
     justify-content: center;
   }
