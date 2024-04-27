@@ -1,88 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hydra Launcher</title>
     <meta name="title" content="Hydra Launcher" />
     <meta
-      name="description"
-      content="Hydra Launcher is an open source launcher capable of searching for pirated games among the biggest repackers in the community."
+            name="description"
+            content="Hydra Launcher is an open source launcher capable of searching for pirated games among the biggest repackers in the community."
     />
     <meta
-      name="keywords"
-      content="launcher, games, jogos, hydra, hydra launcher, repacks, game repacks, repacks de jogos, fitgirl, dodi-repack, KaOsKrew"
+            name="keywords"
+            content="launcher, games, jogos, hydra, hydra launcher, repacks, game repacks, repacks de jogos, fitgirl, dodi-repack, KaOsKrew"
     />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
-    <link rel="icon" href="public/images/favicon.ico" />
+    <link rel="icon" href="public/img/favicon.ico" />
+
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <h1 class="fira-mono-bold nav-title">Hydra</h1>
-            </li>
-            <li>
-              <a
-                class="fira-mono-medium nav-link"
-                target="_blank"
-                rel="noreferrer"
-                href="https://twitter.com/hydralauncher"
-                >./twitter</a
-              >
-            </li>
-            <li>
-              <a
-                class="fira-mono-medium nav-link"
-                target="_blank"
-                rel="noreferrer"
-                href="https://discord.gg/hydralauncher"
-                >./discord</a
-              >
-            </li>
-          </ul>
-          <a
-            class="fira-mono-regular button"
-            href="https://github.com/hydralauncher/hydra"
-            >Source code</a
-          >
+</head>
+<body>
+<div class="app">
+    <header>
+        <nav class="navbar">
+            <div class="hydra-logo">
+                <h1>
+                    Hydra
+                </h1>
+            </div>
+            <div class="navbar-items">
+                <div>
+                    <div class="language-button" onmouseover="Lang.show()">
+                        <span class="language-icon-container">
+                            <img class="language-icon" src="public/img/globe.svg" alt="language"/>
+                        </span>
+                        <span>
+                            <span>
+                                English
+                            </span>
+                            <span>
+                                <img class="language-chevron" src="public/img/chevron-down.svg" alt="language-chevron"/>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="language-box" onmouseleave="Lang.hide()">
+                        <div class="language-item">
+                            <a class="language-link" target="_blank" rel="noreferrer" href="#">
+                                <span class="country-icon-container">
+                                  <img class="country-icon" src="public/img/united-kingdom.svg" alt="releases" />
+                                </span>
+                                <span class="language-name">
+                                  English
+                                </span>
+                            </a>
+                        </div>
+                        <div class="language-item">
+                            <a class="language-link" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs">
+                                <span class="country-icon-container">
+                                  <img class="country-icon" src="public/img/brazil.svg" alt="releases" />
+                                </span>
+                                <span class="language-name">
+                                  Portuguese
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="social">
+                    <span>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+                            <span class="social-icon-container">
+                                <img class="social-icon" src="public/img/social-github.svg" alt="github" />
+                            </span>
+                        </a>
+                     </span>
+                    <span>
+                        <a target="_blank" rel="noreferrer" href="https://discord.gg/hydralauncher">
+                            <span class="social-icon-container">
+                                <img class="social-icon" src="public/img/social-discord.svg" alt="discord" />
+                            </span>
+                        </a>
+                    </span>
+                    <span>
+                        <a target="_blank" rel="noreferrer" href="https://twitter.com/hydralauncher">
+                          <span class="social-icon-container">
+                            <img class="social-icon" src="public/img/social-x.svg" alt="x.com" />
+                          </span>
+                        </a>
+                    </span>
+                </div>
+            </div>
         </nav>
-      </header>
-      <main>
-        <section class="hero">
-          <div class="hero-description">
-            <div class="hero-description-text">
-              <h2 class="fira-mono-bold hero-title">
-                Experience the ultimate repacks launcher app.
-              </h2>
-              <img src="public/images/screenshot.png" />
-              <p class="fira-mono-regular">
-                Hydra Launcher is an open source launcher capable of searching
-                for pirated games among the biggest repackers in the community.
-              </p>
+    </header>
+    <div class="landing-container">
+        <div class="landing">
+            <div class="landing-content">
+                <div class="content-1">
+                    <span>
+                        Hydra
+                    </span>
+                    <span>
+                        —
+                    </span>
+                    <span class="underscore poppins-light-italic">
+                        <a class="content-a" target="_blank" rel="noreferrer" href="https://www.tecmundo.com.br/voxel/282344-exclusivo-hydra-brasileiros-lancam-steam-pirataria-nao-derrubada.htm">
+                            The Unstoppable Launcher.
+                        </a>
+                    </span>
+                </div>
+                <div class="content-2">
+                    <div>
+                        Experience the ultimate
+                    </div>
+                    <div class="underscore">
+                        repacks launcher app
+                    </div>
+                </div>
+                <div class="content-3">
+                    <div>
+                        “Hydra is a free, open source
+                    </div>
+                    <div>
+                        — and self-sufficient launcher”
+                    </div>
+                </div>
+                <div>
+                    <div class="content-actions">
+                        <div class="download-shadow">
+                            <a id="download" class="download-left" target="_blank" rel="noreferrer" href="">
+                                Download for Windows
+                            </a>
+                            <div class="release-button">
+                                <div onmouseover="Menu.show()" id="download-2" class="download-right">
+                                    <img class="chevron-download" src="public/img/chevron-down.svg" alt="chevron" />
+                                </div>
+                                <div id="release-box" class="release-box" onmouseleave="Menu.hide()">
+                                    <div class="release-box-item">
+                                        <a id="release-exe" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                            <span class="os-icon-container">
+                                              <img class="os-icon" src="public/img/windows.svg" alt="releases" />
+                                            </span>
+                                            <span class="align-center flex release-text">
+                                              Hydra.exe
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="release-box-item">
+                                        <a id="release-deb" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                            <span class="os-icon-container">
+                                              <img class="os-icon" src="public/img/debian.svg" alt="releases" />
+                                            </span>
+                                            <span class="align-center flex release-text">
+                                              Hydra.deb
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="release-box-item">
+                                        <a id="release-rpm" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                            <span class="os-icon-container">
+                                              <img class="os-icon" src="public/img/redhat.svg" alt="releases" />
+                                            </span>
+                                            <span class="align-center flex release-text">
+                                              Hydra.rpm
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="release-box-item">
+                                        <a id="release-notes" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                            <span class="os-icon-container">
+                                              <img class="os-icon" src="public/img/notes.svg" alt="releases" />
+                                            </span>
+                                            <span class="align-center flex release-text">
+                                              Changelog
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="source">
+                            <a class="source-a content-a underscore" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+                                View Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-item">
+                        <div class="info-head">
+                            Free
+                        </div>
+                        <div class="info-content">
+                            We
+                            <span class="info-span">
+                                don't care
+                            </span>
+                            about <br> your
+                            <span class="info-span">
+                                money
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-head">
+                            Open Source
+                        </div>
+                        <div class="info-content">
+                            Feel free to read
+                            <span  class="info-span">
+                                our <br> source code
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-head">
+                            No Ads
+                        </div>
+                        <div class="info-content">
+                            You hate ads?
+                            <span class="info-span">
+                                <br>We too!
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-buttons">
-              <a
-                class="fira-mono-regular button"
-                href="https://github.com/hydralauncher/hydra/releases"
-                >Download now!</a
-              >
-              <a
-                class="fira-mono-regular button mobile-button"
-                href="https://github.com/hydralauncher/hydra"
-                >Source code</a
-              >
+            <div class="landing-banner">
+                <img class="landing-img" src="./public/img/screenshot.png" alt="screenshot" />
             </div>
-          </div>
-          <img src="public/images/screenshot.png" />
-        </section>
-      </main>
+        </div>
     </div>
-  </body>
+</div>
+<div class="radial-gradient"></div>
+
+<script src="./lib/language-handler.js"></script>
+<script src="./lib/hydra-release.js"></script>
+</body>
 </html>
