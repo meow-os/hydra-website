@@ -361,6 +361,8 @@
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .release-button {
@@ -642,7 +644,7 @@ a {
 
     .download-left,
     .source-a {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .download-left {
@@ -682,7 +684,7 @@ a {
 
     .download-left,
     .source-a {
-        font-size: 1rem;
+        font-size: .75rem;
     }
 
     .source-a {
@@ -703,6 +705,13 @@ a {
 
     .landing-container {
         padding: 0 4rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .download-left,
+    .source-a {
+        font-size: .65rem;
     }
 }
 
