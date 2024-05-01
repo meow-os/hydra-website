@@ -157,6 +157,16 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+.language-item-active {
+    padding: 8px 8px;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.15s;
+    background-color: var(--surface-400);
+    color: var(--primary-100);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 .language-link {
     display: flex;
     flex-direction: row;
