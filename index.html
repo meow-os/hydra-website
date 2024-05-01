@@ -47,8 +47,8 @@
                         </span>
                     </div>
                     <div class="language-box" onmouseleave="Lang.hide()">
-                        <div id="en" class="language-item">
-                            <a class="language-link" target="_blank" rel="noreferrer" href="#">
+                        <div onclick="changeLanguage('en')" id="en" class="language-item">
+                            <a class="language-link" target="_blank" rel="noreferrer">
                                 <span class="country-icon-container">
                                   <img class="country-icon" src="public/img/united-kingdom.svg" alt="releases" />
                                 </span>
@@ -57,8 +57,8 @@
                                 </span>
                             </a>
                         </div>
-                        <div id="pt-BR" class="language-item">
-                            <a class="language-link" target="_blank" rel="noreferrer" href="/pt">
+                        <div onclick="changeLanguage('pt')" id="pt-BR" class="language-item">
+                            <a class="language-link" target="_blank" rel="noreferrer">
                                 <span class="country-icon-container">
                                   <img class="country-icon" src="public/img/brazil.svg" alt="releases" />
                                 </span>
@@ -144,7 +144,7 @@
                 <div>
                     <div class="content-actions">
                         <div class="download-shadow">
-                            <a data-i18n="downloadButton" id="download" class="download-left" target="_blank" rel="noreferrer" href="">
+                            <a id="download" class="download-left" target="_blank" rel="noreferrer" href="">
 <!--                                Download for Windows-->
                             </a>
                             <div class="release-button">
