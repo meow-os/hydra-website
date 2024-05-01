@@ -19,6 +19,8 @@
     <link rel="icon" href="public/img/favicon.ico" />
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://unpkg.com/i18next@23.11.3/dist/umd/i18next.js"></script>
 </head>
 <body>
 <div class="app">
@@ -36,8 +38,8 @@
                             <img class="language-icon" src="public/img/globe.svg" alt="language"/>
                         </span>
                         <span class="language-span">
-                            <span class="language-span">
-                                English
+                            <span data-i18n="currentLang" class="language-span">
+<!--                                English-->
                             </span>
                             <span class="language-span">
                                 <img class="language-chevron" src="public/img/chevron-down.svg" alt="language-chevron"/>
@@ -45,26 +47,26 @@
                         </span>
                     </div>
                     <div class="language-box" onmouseleave="Lang.hide()">
-                        <div class="language-item">
+                        <div id="en" class="language-item">
                             <a class="language-link" target="_blank" rel="noreferrer" href="#">
                                 <span class="country-icon-container">
                                   <img class="country-icon" src="public/img/united-kingdom.svg" alt="releases" />
                                 </span>
-                                <span class="language-name">
-                                  English
+                                <span data-i18n="enLang" class="language-name">
+<!--                                  English-->
                                 </span>
                             </a>
                         </div>
-<!--                        <div class="language-item">-->
-<!--                            <a class="language-link" target="_blank" rel="noreferrer" href="/pt">-->
-<!--                                <span class="country-icon-container">-->
-<!--                                  <img class="country-icon" src="public/img/brazil.svg" alt="releases" />-->
-<!--                                </span>-->
-<!--                                <span class="language-name">-->
+                        <div id="pt-BR" class="language-item">
+                            <a class="language-link" target="_blank" rel="noreferrer" href="/pt">
+                                <span class="country-icon-container">
+                                  <img class="country-icon" src="public/img/brazil.svg" alt="releases" />
+                                </span>
+                                <span data-i18n="ptLang" class="language-name">
 <!--                                  Portuguese-->
-<!--                                </span>-->
-<!--                            </a>-->
-<!--                        </div>-->
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -105,25 +107,25 @@
                         —
                     </span>
                     <span class="underscore poppins-light-italic">
-                        <a class="content-a" target="_blank" rel="noreferrer" href="https://www.tecmundo.com.br/voxel/282344-exclusivo-hydra-brasileiros-lancam-steam-pirataria-nao-derrubada.htm">
-                            The Unstoppable Launcher.
+                        <a data-i18n="voxelLink" id="test" class="content-a" target="_blank" rel="noreferrer" href="https://www.tecmundo.com.br/voxel/282344-exclusivo-hydra-brasileiros-lancam-steam-pirataria-nao-derrubada.htm">
+<!--                            The Unstoppable Launcher.-->
                         </a>
                     </span>
                 </div>
                 <div class="content-2">
-                    <div>
-                        Experience the ultimate
+                    <div data-i18n="mainTextOne">
+<!--                        Experience the ultimate-->
                     </div>
-                    <div class="underscore">
-                        repacks launcher app
+                    <div data-i18n="mainTextTwo" class="underscore">
+<!--                        repacks launcher app-->
                     </div>
                 </div>
                 <div class="content-mobile">
-                    <a class="discord-button" target="_blank" rel="noreferrer" href="https://discord.gg/hydralauncher">
-                        Meet us on discord
+                    <a data-i18n="mobileDiscord" class="discord-button" target="_blank" rel="noreferrer" href="https://discord.gg/hydralauncher">
+<!--                        Meet us on discord-->
                     </a>
-                    <a class="gh-button" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
-                        View source code
+                    <a data-i18n="mobileGithub" class="gh-button" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+<!--                        View source code-->
                     </a>
                 </div>
                 <div class="landing-banner-mobile">
@@ -131,20 +133,22 @@
                 </div>
                 <div class="content-3">
                     <div>
-                        &quotHydra is a free, open source
+                        &quot<span data-i18n="descriptionOne"></span>
+<!--                        &quotHydra is a free, open source-->
                     </div>
                     <div>
-                        — and self-sufficient launcher&quot
+                        <span data-i18n="descriptionTwo"></span>&quot
+<!--                        — and self-sufficient launcher&quot-->
                     </div>
                 </div>
                 <div>
                     <div class="content-actions">
                         <div class="download-shadow">
-                            <a id="download" class="download-left" target="_blank" rel="noreferrer" href="">
-                                Download for Windows
+                            <a data-i18n="downloadButton" id="download" class="download-left" target="_blank" rel="noreferrer" href="">
+<!--                                Download for Windows-->
                             </a>
                             <div class="release-button">
-                                <div onmouseover="Menu.show()" id="download-2" class="download-right">
+                                <div onmouseover="spawnReleaseBox(); Menu.show()" id="download-2" class="download-right">
                                     <img class="chevron-download" src="public/img/chevron-down.svg" alt="chevron" />
                                 </div>
                                 <div id="release-box" class="release-box" onmouseleave="Menu.hide()">
@@ -183,8 +187,8 @@
                                             <span class="os-icon-container">
                                               <img class="os-icon" src="public/img/notes.svg" alt="releases" />
                                             </span>
-                                            <span class="align-center flex release-text">
-                                              Changelog
+                                            <span data-i18n="changeLog" class="align-center flex release-text">
+<!--                                              Changelog-->
                                             </span>
                                         </a>
                                     </div>
@@ -192,47 +196,66 @@
                             </div>
                         </div>
                         <div class="source">
-                            <a class="source-a content-a underscore" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
-                                View Source Code
+                            <a data-i18n="sourceCodeButton" class="source-a content-a underscore" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+<!--                                View Source Code-->
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="info">
                     <div class="info-item">
-                        <div class="info-head">
-                            Free
+                        <div data-i18n="cardOneTitle" class="info-head">
+<!--                            Free-->
                         </div>
                         <div class="info-content">
-                            We
-                            <span class="info-span">
-                                don't care
+                            <span data-i18n="cardOneTxtOne">
+<!--                                We-->
                             </span>
-                            about <br> your
                             <span class="info-span">
-                                money
+                                <span data-i18n="cardOneTxtTwo">
+<!--                                    don't care-->
+                                </span>
+                            </span>
+                            <span data-i18n="cardOneTxtThree">
+<!--                                about-->
+                            </span>
+                            <br>
+                            <span data-i18n="cardOneTxtFour">
+<!--                                your-->
+                            </span>
+                            <span data-i18n="cardOneTxtFive" class="info-span">
+<!--                                money-->
                             </span>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-head">
-                            Open Source
+                        <div data-i18n="cardTwoTitle" class="info-head">
+<!--                            Open Source-->
                         </div>
                         <div class="info-content">
-                            Feel free to read
-                            <span  class="info-span">
-                                our <br> source code
+                            <span data-i18n="cardTwoTxtOne">
+<!--                                Feel free to read-->
+                            </span>
+                            <span data-i18n="cardTwoTxtTwo" class="info-span">
+<!--                                our-->
+                            </span>
+                            <br>
+                            <span data-i18n="cardTwoTxtThree">
+<!--                                source code-->
                             </span>
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-head">
-                            No Ads
+                        <div data-i18n="cardThreeTitle" class="info-head">
+<!--                            No Ads-->
                         </div>
                         <div class="info-content">
-                            Do you hate ads?
-                            <span class="info-span">
-                                <br>We do it too!
+                            <span data-i18n="cardThreeTxtOne">
+<!--                                Do you hate ads?-->
+                            </span>
+                            <br>
+                            <span data-i18n="cardThreeTxtTwo" class="info-span">
+<!--                                We do it too!-->
                             </span>
                         </div>
                     </div>
@@ -246,7 +269,7 @@
 </div>
 <div class="radial-gradient"></div>
 
-<script src="./lib/language-handler.js"></script>
 <script src="./lib/hydra-release.js"></script>
+<script src="./lib/i18n.js"></script>
 </body>
 </html>
